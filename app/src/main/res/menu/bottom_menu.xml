@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/misPlantas" android:title="Mis plantas"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_baseline_spa_24"
+        android:visible="true"/>
+    <item android:id="@+id/planta" android:title="Home"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_baseline_grass_24"
+        android:visible="true"/>
+    <item android:id="@+id/calendario" android:title="Calendario"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_baseline_calendar_month_24"
+        android:visible="true"/>
+
+
+</menu>
