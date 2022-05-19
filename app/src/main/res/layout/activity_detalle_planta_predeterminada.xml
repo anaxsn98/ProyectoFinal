@@ -8,15 +8,25 @@
     tools:context=".DetallePlantaPredeterminadaActivity">
 
     <androidx.appcompat.widget.Toolbar
+
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/secondaryColor"
         android:text="hola"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.Toolbar>
+    <ImageView
+        android:id="@+id/imagenSuperior"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="-400dp"
+        android:layout_marginTop="-90dp"
+        android:background="@drawable/planta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imagenInferior"
@@ -31,16 +41,17 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
-        android:elevation="-5dp"
-        android:id="@+id/imagenSuperior"
-        android:layout_width="250dp"
-        android:layout_height="200dp"
-        android:layout_marginStart="-440dp"
-        android:layout_marginTop="150dp"
-        android:background="@drawable/planta"
+        android:id="@+id/imgVegetable"
+        android:layout_width="240dp"
+        android:layout_height="140dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/zanahoria"
+        android:elevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/layoutCliente" />
+
+
     <LinearLayout
         android:id="@+id/layoutCliente"
         android:layout_width="match_parent"
@@ -49,54 +60,29 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
         <LinearLayout
-            android:elevation="15dp"
             android:layout_width="match_parent"
             android:layout_height="220dp"
-            android:background="@drawable/seleccion_planta_predeterminada"
             android:orientation="vertical"
             app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
             <TextView
 
+                android:layout_marginTop="40dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Fresa Reina de los Valles"
-                android:textColor="@color/iconColor"
-                android:textSize="28sp"
-                android:textStyle="normal" />
+                android:text="Susana Horia"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="35sp"/>
 
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/imgVegetable"
-                        android:layout_width="240dp"
-                        android:layout_height="140dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginRight="10dp"
-                        android:background="@drawable/zanahoria" />
-
-                </LinearLayout>
-            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
+            android:layout_marginTop="-10dp"
             android:layout_width="match_parent"
-            android:layout_height="450dp"
+            android:layout_height="480dp"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
             android:layout_marginEnd="20dp"
             android:background="@drawable/fondo_loguin_registro"
             android:elevation="-5dp"
@@ -104,6 +90,7 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:layout_marginTop="-20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"

@@ -7,6 +7,16 @@
     android:background="@drawable/degradado1"
     tools:context=".MainActivitySelectPlant">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/primaryDarkColor"
+        android:text="hola"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.Toolbar>
 
 
     <ImageView
@@ -80,18 +90,18 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="35dp"
-                android:layout_marginTop="15dp"
                 android:layout_marginRight="42dp"
                 android:text="Es hora de crear a nuestra nueva planta "
                 android:textColor="@color/white"
-                android:textSize="25dp"
+                android:textSize="20dp"
                 android:textStyle="bold" />
 
             <LinearLayout
+                android:id="@+id/layoutPlantPersonalized"
                 android:layout_width="390dp"
                 android:layout_height="170dp"
                 android:layout_marginStart="0dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginEnd="10dp"
                 android:background="@drawable/seleccion_planta"
                 android:elevation="10dp"
@@ -137,6 +147,7 @@ Todo a tu gusto"
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/layouPlantDefault"
                 android:layout_width="390dp"
                 android:layout_height="170dp"
                 android:layout_marginStart="0dp"

@@ -36,6 +36,10 @@ public class ListaPlantaSingleton {
         listaPlanta = new ArrayList<>();
         addPlanta("Mona", "Gato", 2);
         addPlanta("Pascal", "Gato", 2);
+        addPlanta("Rosa Melano", "Planta", 2);
+        addPlanta("Susana Horia", "Planta", 2);
+        addPlanta("Rosa Melpito", "Planta", 2);
+
 
     }
 

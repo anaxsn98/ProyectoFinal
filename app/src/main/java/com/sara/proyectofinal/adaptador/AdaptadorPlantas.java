@@ -35,7 +35,7 @@ public class AdaptadorPlantas extends RecyclerView.Adapter<AdaptadorPlantas.View
     @Override
     //Aqui recogemos el parent
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.recicler_view, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.recicler_view_cuadro, parent, false);
         ViewHolder viewHolder = new ViewHolder(v);
         return viewHolder;
     }

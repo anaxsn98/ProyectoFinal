@@ -65,9 +65,12 @@ public class LoginActivity extends AppCompatActivity {
                 String textEmail = editEmail.getText().toString();
                 String textPassword = editPassword.getText().toString();
 
-                if(controlDeErorres(textEmail,textPassword)){
-                    obtenerUsuarioRest(textEmail,textPassword);
-                }
+                 // if(controlDeErorres(textEmail,textPassword)){
+                //    obtenerUsuarioRest(textEmail,textPassword);
+               // }
+                Intent mainActivity = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(mainActivity);
+                finish();
 
             }
         });

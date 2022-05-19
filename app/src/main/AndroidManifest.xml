@@ -14,16 +14,20 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".Usuario"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".MainActivitySelectPlant"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MisPlantasActivity"/>
         <activity
             android:name=".ForgetPasswordActivity"
             android:exported="false" />
         <activity
             android:name=".DetallePlantaPredeterminadaActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivitySelectPlant"
+            />
         <activity
             android:name=".ConfiguracionPlantaPersonalizadaActivity"
             android:exported="false" />

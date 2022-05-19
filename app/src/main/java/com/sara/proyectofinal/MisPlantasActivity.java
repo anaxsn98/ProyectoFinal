@@ -10,8 +10,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationBarView;
 import com.sara.proyectofinal.adaptador.AdaptadorPlantas;
 import com.sara.proyectofinal.modelo.entidad.Planta;
@@ -24,6 +26,7 @@ public class MisPlantasActivity extends AppCompatActivity {
     private BottomNavigationView bottomNavigationView;
     public RecyclerView recyclerView;
     public AdaptadorPlantas adaptadorplanta;
+    public FloatingActionButton addButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,11 @@ public class MisPlantasActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_plant);
 
         recyclerView = findViewById(R.id.rViewPlantas);
+
+        addButton = findViewById(R.id.btnAddPlant);
+
+        bottomNavigationView = findViewById(R.id.bottomNavigationBar);
+
 
         //Mejora el rendimiento, si el contenido no afecta al tamaño del reciclerView
         recyclerView.setHasFixedSize(true);
@@ -54,10 +62,18 @@ public class MisPlantasActivity extends AppCompatActivity {
         //controlador = Controlador.getInstance();
         toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("");
-        bottomNavigationView = findViewById(R.id.bottomNavigationBar);
         //controlador.verCarrito();
         //Bundle que en caso de venir de login no estará vacío, por lo que guardará el valor del id en userId.
         setSupportActionBar(toolbar);
+
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent mainActivity = new Intent(MisPlantasActivity.this, MainActivitySelectPlant.class);
+                startActivity(mainActivity);
+                finish();
+            }
+        });
 
         bottomNavigationView.setSelectedItemId(R.id.misPlantas);
 
