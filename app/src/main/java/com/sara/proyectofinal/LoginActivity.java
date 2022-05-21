@@ -152,7 +152,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(Call<Usuario> call, Response<Usuario> response) {
                 if (response.isSuccessful()) {
                     Log.d("Login", "busqueda hecha");
-                    //Gracias a Gson, me convierte los json a objetos Usuario
+                    //Gracias a Gson, me convierte los json a objetos UsuarioActivity
                     Usuario usuario = response.body();
 
                     /*Comprobar la pwd*/

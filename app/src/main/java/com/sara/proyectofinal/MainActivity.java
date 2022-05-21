@@ -3,7 +3,6 @@ package com.sara.proyectofinal;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -109,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public boolean onCreateOptionsMenu(Menu menu) {
             getMenuInflater().inflate(R.menu.menu_bar, menu);
-            //menu.findItem(R.id.Usuario).setVisible(true);
+            //menu.findItem(R.id.UsuarioActivity).setVisible(true);
             return true;
         }
 
@@ -134,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
             if (id == R.id.menu_usuario) {
-                Intent intent = new Intent( this, Usuario.class);
+                Intent intent = new Intent( this, UsuarioActivity.class);
                 startActivity(intent);
             }
             return super.onOptionsItemSelected(item);

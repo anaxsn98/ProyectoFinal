@@ -3,63 +3,38 @@ package com.sara.proyectofinal;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
-import com.sara.proyectofinal.adaptador.AdaptadorPlantas;
-import com.sara.proyectofinal.modelo.entidad.Planta;
-import com.sara.proyectofinal.singleton.ListaPlantaSingleton;
 
-import java.util.List;
-
-public class MisPlantasActivity extends AppCompatActivity {
-    private Toolbar toolbar;
+public class UsuarioActivity extends AppCompatActivity {
     private BottomNavigationView bottomNavigationView;
-    public RecyclerView recyclerView;
-    public AdaptadorPlantas adaptadorplanta;
+    private Toolbar toolbar;
+    private EditText editPassword, editPasswordConfirmar,editInvernadero;
+    private Button btnModificarUsuairo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_plant);
+        setContentView(R.layout.activity_usuario);
 
-        recyclerView = findViewById(R.id.rViewPlantas);
-
-        //Mejora el rendimiento, si el contenido no afecta al tamaño del reciclerView
-        recyclerView.setHasFixedSize(true);
-
-        //El recicler va a utilizar un linear layout
-        recyclerView.setLayoutManager(
-                new GridLayoutManager(
-                        this,
-                        2));
-
-        //Asociamos un adapter
-        //El adaptador hace de puente entre el modelo de datos que es la lista de personajes y
-        //entre la vista que es el recicler view
-        ListaPlantaSingleton.getInstance().inicializar();
-        List<Planta> listaAnimal = ListaPlantaSingleton.getInstance().getListaPlanta();
-        //le pasamos la lista al adaptador
-        adaptadorplanta = new AdaptadorPlantas(listaAnimal);
-        //Le pasamos el adaptador
-        recyclerView.setAdapter(adaptadorplanta);
-
-        //controlador = Controlador.getInstance();
+        editPassword = findViewById(R.id.editPasswordActivityUsuario);
+        editPasswordConfirmar = findViewById(R.id.editPasswordConfirmarActivityUsuario);
+        editInvernadero = findViewById(R.id.editInvernaderoActivityUsuario);
+        btnModificarUsuairo = findViewById(R.id.btnModificarUsuairo);
+        bottomNavigationView = findViewById(R.id.bottomNavigationBar);
+        bottomNavigationView.setSelectedItemId(R.id.misPlantas);
         toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("");
-        bottomNavigationView = findViewById(R.id.bottomNavigationBar);
-        //controlador.verCarrito();
-        //Bundle que en caso de venir de login no estará vacío, por lo que guardará el valor del id en userId.
         setSupportActionBar(toolbar);
-
-        bottomNavigationView.setSelectedItemId(R.id.misPlantas);
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
@@ -83,8 +58,14 @@ public class MisPlantasActivity extends AppCompatActivity {
                 return true;
             }
         });
-    }
-    /**
+
+        btnModificarUsuairo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+    }/**
      * Recoge el menu que hemos creado en un xml y lo infla en la vista
      * Devuelve verdadero en caasao de que pueda ejecytar el proceso
      *
@@ -125,7 +106,4 @@ public class MisPlantasActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void cargarListaPlantas(int id){
-
-    }
 }

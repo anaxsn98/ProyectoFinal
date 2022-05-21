@@ -25,7 +25,7 @@ public class GestorPlanta {
     public void inicializar(){
         //Tenemos que configurar Retrofit para acceder al servicio
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.1.35:8080/")
+                .baseUrl("http://segundo-env.eba-ecxd7vmm.us-east-2.elasticbeanstalk.com/")
                 .addConverterFactory(GsonConverterFactory.create(
                         new GsonBuilder().serializeNulls().create()
                 )).build();

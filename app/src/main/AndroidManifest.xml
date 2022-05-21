@@ -13,7 +13,7 @@
         android:theme="@style/Theme.ProyectoFinal"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".Usuario"
+            android:name=".UsuarioActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivitySelectPlant"

@@ -66,7 +66,7 @@ public class Usuario implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Usuario{" +
+		return "UsuarioActivity{" +
 				"id=" + id +
 				", correo='" + correo + '\'' +
 				", nombre='" + nombre + '\'' +
