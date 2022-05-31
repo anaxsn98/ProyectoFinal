@@ -13,7 +13,7 @@ import retrofit2.http.PUT;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 
-public interface GoRestUsuarioApiService {
+public interface  GoRestUsuarioApiService {
     @GET("usuarios")
     Call<Usuario> login(@Query("nombre") String nombre, @Query("pwd") String pwd);
 

@@ -18,6 +18,15 @@ public class Planta implements Serializable {
     private int intervaloTiempoVentilador;// 0 una vez al dia, 1 una vez a la semana, 2 una vez al mes
     private int minVentilador;
     private String amor;
+    private String img;
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
 
     public Planta() {
     }
